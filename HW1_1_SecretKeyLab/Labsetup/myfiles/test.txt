@@ -1,0 +1,9 @@
+Plaintext: original message
+Ciphertext: message in transformed form
+Encryption: process of plaintext -> ciphertext
+Decryption: process of ciphertext->plaintext
+Key: value to control encryption/decryption
+
+Secret Key Cryptography: plaintext-> [encryption(same key)] -> ciphertext -> [decryption(same key)] -> plaintext
+Public Key Cryptography: message -> [Sign (Private Key)] -> Digital Signature -> [Verify(Public Key)] -> Yes/No
+	
