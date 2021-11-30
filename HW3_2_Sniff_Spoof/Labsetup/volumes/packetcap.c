@@ -303,14 +303,13 @@ int main()
 	pcap_t *handle;
 	char errbuf[PCAP_ERRBUF_SIZE];
 	struct bpf_program fp;
-	char filter_exp[] = "icmp";
+	char filter_exp[] = "tcp";
 	bpf_u_int32 net;
 	// Step 1: Open live pcap session on NIC with name eth3.
 	//         Students need to change "eth3" to the name found on their own
 	//         machines (using ifconfig). The interface to the 10.9.0.0/24
 	//         network has a prefix "br-" (if the container setup is used).
-	handle = pcap_open_live("br-7dd95323eee8", BUFSIZ, 0, 1000, errbuf);
-	pcap_set_promisc(handle,0);
+	handle = pcap_open_live("br-eee96822962c", BUFSIZ, 1, 1000, errbuf);
 	// Step 2: Compile filter_exp into BPF psuedo-code
 	pcap_compile(handle, &fp, filter_exp, 0, net);
 	if (pcap_setfilter(handle, &fp) != 0)

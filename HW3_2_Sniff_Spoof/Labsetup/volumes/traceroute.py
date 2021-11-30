@@ -1,7 +1,8 @@
 from scapy.all import*
 #references codeinlet.com
+#Task 1.3
 ip = IP()
-ip.dst = '142.250.191.68' # nslookup sjsu.edu 
+ip.dst = '75.75.75.75' # nslookup sjsu.edu 
 ip.ttl = 1
 icmp = ICMP()
 # send(ip/icmp)
